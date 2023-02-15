@@ -1,6 +1,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    //Agregar a pedido Cliente CC
+    const divCC= document.createElement('DIV');
+    divCC.classList.add('flex', 'flex-col', 'space-y-2');
+
+    const labelCC= document.createElement('LABEL');
+    labelCC.setAttribute('for', 'CC');
+    labelCC.classList.add('font-regular','font-medium');
+    labelCC.innerHTML = `<p>CC: <span class="opacity-50">(Opcional)</span></p>`;
+
+    const CC= document.createElement('INPUT');
+    CC.setAttribute('id', 'CC');
+    CC.type = 'email';
+    CC.setAttribute('name', 'CC');
+    CC.placeholder = ('Email copia, ej: correo2@correo.com');
+    CC.classList.add('border', 'border-gray-300', 'px-3', 'py-2', 'rounded-lg');
+
+
+    //Añadir input a label y luego DIV
+    
+    divCC.appendChild(labelCC);
+    divCC.appendChild(CC);
+
+    
+
+    
 
     const inputEmail = document.querySelector('#email');
     const inputAsunto = document.querySelector('#asunto');
@@ -9,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnEnviar = document.querySelector('#formulario button[type="submit"]');
     const btnReset = document.querySelector('#formulario button[type="reset"]');
     const spinner = document.querySelector('#spinner');
+
+
     const email = {
         email: '',
         asunto: '',
@@ -19,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     inputMensaje.addEventListener('input', validar);
 
     formulario.addEventListener('submit', enviarEmail);
+    //insertar el DIVCC
+    formulario.insertBefore(divCC, formulario.children[1])
     
     btnReset.addEventListener('click', e=> {
         e.preventDefault();
