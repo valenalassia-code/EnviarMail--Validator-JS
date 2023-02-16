@@ -26,6 +26,9 @@ El objetivo de esta aplicación es validar los datos ingresados por el usuario e
 - Comprobación de contraseña segura
 - Comprobación de longitud y formato de fecha
 
+### Proyecto subido a Netlify
+
+[Enlance aquí](https://creative-puppy-cd7c8e.netlify.app)
 
 Agradecimiento especial al profesor Juan Valdez de la Torre. Código con Juan.
 Es importante reconocer y agradecer el trabajo y la dedicación de aquellos que comparten su conocimiento y habilidades para hacer del mundo un lugar mejor y más eficiente. Así que, gracias de nuevo al creador del código por su contribución a la comunidad del desarrollo web.
